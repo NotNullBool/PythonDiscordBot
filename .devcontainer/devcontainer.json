@@ -38,7 +38,21 @@
 			// Add the IDs of extensions you want installed when the container is created.
 			"extensions": [
 				"ms-python.python",
-				"ms-python.vscode-pylance"
+				"ms-python.vscode-pylance",
+				"njpwerner.autodocstring",
+				"formulahendry.code-runner",
+				"streetsidesoftware.code-spell-checker",
+				"mhutchie.git-graph",
+				"eamodio.gitlens",
+				"oderwat.indent-rainbow",
+				"VisualStudioExptTeam.vscodeintellicode",
+				"esbenp.prettier-vscode",
+				"donjayamanne.python-extension-pack",
+				"KevinRose.vsc-python-indent",
+				"2gua.rainbow-brackets",
+				"Gruntfuggly.todo-tree",
+				"alefragnani.Bookmarks",
+				"aaron-bond.better-comments"
 			]
 		}
 	},

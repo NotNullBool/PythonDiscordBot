@@ -1,5 +1,2 @@
+""" Discord Bot Application
 """
-info
-"""
-
-print("hello world")

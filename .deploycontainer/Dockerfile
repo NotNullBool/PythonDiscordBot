@@ -1,15 +1,12 @@
+# syntax = edrevo/dockerfile-plus
 # For more information, please refer to https://aka.ms/vscode-docker-python
-FROM python:3.10-bullseye
+INCLUDE+ .sharedcontainer/Dockerfile.python_version
+FROM python:${PYTHON_VERSION}
 
-# Keeps Python from generating .pyc files in the container
-ENV PYTHONDONTWRITEBYTECODE=1
-
-# Turns off buffering for easier container logging
-ENV PYTHONUNBUFFERED=1
+INCLUDE+ .sharedcontainer/Dockerfile.environment_variables
 
 # Install pip requirements
-COPY requirements.txt .
-RUN python -m pip install -r requirements.txt
+INCLUDE+ .sharedcontainer/Dockerfile.requirements_install
 
 WORKDIR /app
 COPY . /app

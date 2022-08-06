@@ -4,5 +4,5 @@ services:
   pythondiscordbot:
     image: pythondiscordbot
     build:
-      context: .
-      dockerfile: ./Dockerfile
+      context: ..
+      dockerfile: ./.deploycontainer/Dockerfile

@@ -1,9 +1,9 @@
 """ Discord Bot Application
 """
+import logging
 import discord
 import meta_info_handler
 
-TOKEN: str = meta_info_handler.get_token()
 
 class MyClient(discord.Client):
     """MyClient The Base Client
@@ -15,6 +15,7 @@ class MyClient(discord.Client):
         """on_ready when bot first starts
         """
         print(f"Logged on as {self.user}")
+
     async def on_message(self, message: discord.Message):
         """on_message when message is sent in discord
 
@@ -23,7 +24,15 @@ class MyClient(discord.Client):
         """
         print(f"Message from {message.author}: {message.content}")
 
+
 if __name__ == "__main__":
+    # Get token
+    TOKEN: str = meta_info_handler.get_token()
+
+    # Set logging
+    logging.basicConfig(level=logging.INFO)
+
+    # Run client
     client = MyClient()
     try:
         client.run(TOKEN)

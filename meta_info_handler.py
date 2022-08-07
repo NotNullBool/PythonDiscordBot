@@ -4,8 +4,6 @@ import json
 from typing import Dict
 from discord import LoginFailure
 
-# TODO: try load token, except create token json alert terminal
-
 def get_token(token_file_path: str = "./token.json") -> str:
     """get_token Get Discord Bot Token
     Returns:
